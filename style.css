@@ -1,7 +1,9 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 20px;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
@@ -13,35 +15,54 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  gap: 5rem;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1.5rem;
 }
 
 .main-container {
   background-color: hsl(217, 19%, 24%);
   color: hsl(193, 38%, 86%);
-  width: 500px;
-  height: 300px;
-  padding: 1.2rem;
+  width: 100%;
+  height: auto;
+  max-width: 540px;
+  padding: 2.5rem 1.5rem 4rem 1.5rem;
   border-radius: 1rem;
-  gap: 0.8rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#advice-id {
+  color: hsl(150, 100%, 66%);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  margin-bottom: 1.5rem;
+}
+
+#advice-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
 }
 
 .divider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 4rem;
-  left: 0;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.divider img {
   width: 100%;
 }
 
 .dice {
   background-color: hsl(150, 100%, 66%);
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -51,8 +72,29 @@ body {
   left: 50%;
   transform: translate(-50%, 50%);
   cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }
 
 .dice:hover {
   box-shadow: 0 0 40px hsl(150, 100%, 66%);
+}
+
+/* --- MEDIA QUERIES --- */
+
+/* For Desktop Screens (768px and up) */
+@media (min-width: 768px) {
+  .main-container {
+    width: 540px;
+    padding: 2rem 2rem 4rem 3rem;
+    margin: 1rem;
+  }
+
+  #advice-id {
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+  }
+
+  #advice-text {
+    font-size: 1.75rem;
+  }
 }
