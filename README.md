@@ -1,52 +1,81 @@
-🎲 Advice Generator App
-A sleek, interactive advice generator built as a Frontend Mentor challenge. This project focuses on clean UI/UX, responsive design, and seamless API integration.
+# 🎲 Advice Generator App
 
-🚀 The Challenge
-The goal of this project was to build an advice generator app that pulls data from the Advice Slip API and matches the provided design as closely as possible.
+A sleek and interactive advice generator built as part of a Frontend Mentor challenge. This project focuses on clean UI/UX, responsive design, and seamless API integration.
 
-Users should be able to:
+---
 
-View an optimal layout depending on their device's screen size.
+## 🚀 The Challenge
 
-See hover states for all interactive elements.
+The goal of this project was to build an advice generator app that fetches data from the Advice Slip API and matches the provided design as closely as possible.
 
-Generate a new piece of advice by clicking the dice icon.
+Users can:
 
-🛠️ My Process
-Built With
-HTML5: Semantic markup for accessibility.
+* View an optimal layout across different screen sizes (mobile, tablet, desktop)
+* See hover states for all interactive elements
+* Generate new advice by clicking the dice icon
 
-CSS3: Custom properties (variables), Flexbox, and Mobile-first media queries.
+---
 
-JavaScript: Asynchronous programming using fetch and async/await.
+## 🛠️ My Process
 
-What I Learned
-During this project, I deepened my understanding of:
+### 💻 Built With
 
-API Integration: Successfully fetching data from a third-party API and handling the JSON response.
+* **HTML5** – Semantic markup for accessibility
+* **CSS3** – Custom properties, Flexbox, and mobile-first design
+* **JavaScript (Vanilla JS)** – Async/await and Fetch API for data handling
 
-CSS Positioning: Using absolute positioning and transform to perfectly center the dice button on the container's edge.
+---
 
-Responsive Design: Utilizing the <picture> tag to swap divider images based on the user's viewport.
+## 📚 What I Learned
 
-JavaScript
-// Highlighting my favorite snippet: The Async Fetch
+This project helped me strengthen key frontend development skills:
+
+* **API Integration:** Fetching and handling data from a third-party API
+* **Asynchronous JavaScript:** Using `async/await` for cleaner and more readable code
+* **CSS Positioning:** Centering elements using `position: absolute` and `transform`
+* **Responsive Design:** Adapting layouts using media queries and the `<picture>` element
+
+---
+
+## ⭐ Highlight
+
+Here’s a snippet of the async function used to fetch advice:
+
+```javascript
 async function getAdvice() {
   const response = await fetch(`https://api.adviceslip.com/advice?t=${Math.random()}`);
   const data = await response.json();
-  // ... update UI logic
+  // Update UI with new advice
 }
-📸 Screenshots
-Desktop View
-![alt text](image.png)
-Mobile View
-![alt text](image-1.png)
-🔗 Links
-Live Site URL: [Add your live link here (GitHub Pages/Vercel)]
+```
 
-Solution URL: [Add your Frontend Mentor solution link here]
+---
 
-👩‍💻 Author
-Sussana Teye
+## 📸 Screenshots
 
-Frontend Mentor - [https://www.frontendmentor.io/profile/Sussana7]
+### 🖥️ Desktop View
+
+![Desktop View](image.png)
+
+### 📱 Mobile View
+
+![Mobile View](image-1.png)
+
+---
+
+---
+
+## 👩‍💻 Author
+
+* **Name:** Sussana Teye
+* **Frontend Mentor:** https://www.frontendmentor.io/profile/Sussana7
+
+---
+
+## 💡 Future Improvements
+
+* Add loading and error states for better UX
+* Improve accessibility (ARIA roles, keyboard navigation)
+* Add subtle animations for smoother interactions
+
+---
